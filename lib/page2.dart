@@ -10,30 +10,44 @@ class Page2 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Página 2'),
+        automaticallyImplyLeading: false,
       ),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             ElevatedButton(
-              child: const Text('Ir a Página 1'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Page1()),
-                );
-              },
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              child: const Text('Ir a Inicio'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const HomePage()),
-                );
-              },
-            ),
+             child: const Text('Ir a Página 1'),
+             onPressed: () {
+               Navigator.push(
+                 context,
+                 PageRouteBuilder(
+                   pageBuilder: (context, animation, secondaryAnimation) => const Page1(),
+                   transitionDuration: Duration.zero,
+                   reverseTransitionDuration: Duration.zero,
+                 ),
+               );
+             },
+           ),
+           
+           const SizedBox(height: 20),
+
+           ElevatedButton(
+             child: const Text('Ir a Inicio'),
+             onPressed: () {
+               Navigator.push(
+                 context,
+                 PageRouteBuilder(
+                   pageBuilder: (context, animation, secondaryAnimation) => const HomePage(),
+                   transitionDuration: Duration.zero,
+                   reverseTransitionDuration: Duration.zero,
+                 ),
+               );
+             },
+           ),
+
+            
+            
           ],
         ),
       ),

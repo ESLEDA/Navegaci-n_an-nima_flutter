@@ -4,15 +4,27 @@ import 'page1.dart';
 import 'page2.dart';
 
 class Routes {
-  static MaterialPageRoute inicio() {
-    return MaterialPageRoute(builder: (context) => const HomePage());
+  static Route inicio() {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => const HomePage(),
+      transitionDuration: Duration.zero,
+      reverseTransitionDuration: Duration.zero,
+    );
   }
 
-  static MaterialPageRoute page1() {
-    return MaterialPageRoute(builder: (context) => const Page1());
+  static Route page1() {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => const Page1(),
+      transitionDuration: Duration.zero,
+      reverseTransitionDuration: Duration.zero,
+    );
   }
 
-  static MaterialPageRoute page2() {
-    return MaterialPageRoute(builder: (context) => const Page2());
+  static Route page2() {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => const Page2(),
+      transitionDuration: Duration.zero,
+      reverseTransitionDuration: Duration.zero,
+    );
   }
 }
