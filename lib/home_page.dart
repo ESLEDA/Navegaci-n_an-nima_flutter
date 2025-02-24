@@ -11,6 +11,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Inicio'),
+        centerTitle: true,
+        backgroundColor: Colors.blue,
         automaticallyImplyLeading: false,
       ),
       body: Center(

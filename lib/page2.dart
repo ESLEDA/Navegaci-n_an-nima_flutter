@@ -10,6 +10,8 @@ class Page2 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Página 2'),
+        centerTitle: true,
+        backgroundColor: Colors.blue,
         automaticallyImplyLeading: false,
       ),
       body: Center(
